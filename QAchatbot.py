@@ -4,7 +4,8 @@ load_dotenv()
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash",
+                            google_api_key=st.secrets["GOOGLE_API_KEY"])
 
 st.title("🤖 AskBuddy – AI QnA Bot")
 
